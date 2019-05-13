@@ -1,0 +1,40 @@
+<div class="card-body">
+        
+
+<div class="container-fluid" >
+
+	<h3 class="card-title ">Available  files</h3> 
+	 
+       <div class="card-text">
+
+  <div class="list-group" >
+    <div class="list-group-item " 
+  style="box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);">
+  <form class="form-group">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+  </form>
+</div>
+</div>
+<br>
+	
+<div class="list-group" *ngFor="let currentfile of files; let i=index">
+  
+  <div class="list-group-item list-group-item-action flex-column align-items-start " 
+  (click)="onDownload(currentfile)" style="box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1" style="color: blue;" >{{currentfile.title }}</h5>
+      <small style="color: blue;">{{currentfile.updated_at | date }}</small>
+    </div>
+    <p class="mb-1"> {{currentfile.description}} </p>
+    <small>Prepared by "[file authors}}"</small>
+  
+ 
+ <br>         
+</div>
+</div>
+</div>
+
+
+
+
+
